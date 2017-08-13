@@ -1,5 +1,6 @@
 <html>
-<head>
+<head> 
+  <title>My Savings Calculator</title>
   <style>
     /* Defines a cleaner look for tables */
     table  { border-collapse: collapse; }
@@ -9,5 +10,30 @@
   <script type="text/javascript" src="main.js" ></script>
 </head>
 <body>
+    <h3>Savings Calculator</h3>
+    <form>
+        Starting Amount :  <input type="text" id="txtPrincipal"></input><br><br>
+        Rate of return(%) :  <input type="text" id="txtRate"></input><br><br>
+        Years :  <input type="text" id="txtYear"></input><br><br>
+                  <input type="button" value="Calculate" onclick="calculate();"></input>
+                  <input type="button" value="Reset" onclick="reset();"></input>
+
+    </form>
+    <table id="myTbl">
+            <tr>
+                <th>
+                    Month
+                </th>
+                <th>
+                    Interest
+                </th> 
+                <th>
+                    Balance
+                </th>                 
+            </tr>
+            <tbody>
+             
+            </tbody>
+      </table>               
 </body>
 </html>
