@@ -11,29 +11,23 @@
 </head>
 <body>
     <h3>Savings Calculator</h3>
-    <form>
-        Starting Amount :  <input type="text" id="txtPrincipal"></input><br><br>
-        Rate of return(%) :  <input type="text" id="txtRate"></input><br><br>
-        Years :  <input type="text" id="txtYear"></input><br><br>
-                  <input type="button" value="Calculate" onclick="calculate();"></input>
-                  <input type="button" value="Reset" onclick="reset();"></input>
-
-    </form>
-    <table id="myTbl">
-            <tr>
-                <th>
-                    Month
-                </th>
-                <th>
-                    Interest
-                </th> 
-                <th>
-                    Balance
-                </th>                 
-            </tr>
-            <tbody>
-             
-            </tbody>
-      </table>               
+        <p>
+            Starting Amount  :  <input type="text" id="txtPrincipal"></input>
+        </p>
+        <p>
+            Rate of return(%) :  <input type="text" id="txtRate"></input>
+        </p>  
+        <p> 
+            Years :  <input type="text" id="txtYear"></input>
+        </p>
+        <p>
+                    <input type="button" value="Calculate" onclick="calculate();"></input>
+                    <input type="button" value="Reset" onclick="reset();"></input>
+        <p>
+        <p>
+            <div id="myDiv">
+    
+            </div>  
+        </p>        
 </body>
 </html>

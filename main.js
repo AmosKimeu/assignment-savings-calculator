@@ -1,19 +1,22 @@
                 //making changes to the html body
-                // function onLoadBuildDivHeader(){
-                //     document.getElementById('myDiv').innerHTML = "<h1>My Greeting App</h1>";
-                //     //document.getElementById('myDiv').innerHTML += "<h2>my sub header</h2>";
-                // }
+                function onLoadBuildDivTblHeader(){
+                   // document.getElementById('myDiv').innerHTML = "<h3>My Savings</h3>";
+                    document.getElementById('myDiv').innerHTML = "";
+                    document.getElementById('myDiv').innerHTML = "<table id=\"myTbl\"><tr><th>Month</th><th>Interest</th><th>Balance </th></tr><tbody></tbody></table>";
+                }
 
                 //calculate savings
                 function calculate(){
                     
-                    var myPrincipal =  document.getElementById('txtPrincipal').value;
+                    var myPrincipal =  parseFloat(document.getElementById('txtPrincipal').value);
                     var myRate =  parseFloat(document.getElementById('txtRate').value);
-                    var myYears =  document.getElementById('txtYear').value * 12;
+                    var myYears =  parseFloat(document.getElementById('txtYear').value) * 12;
                     var newAmount = 0.0;
                     var newInterest = 0.0;
                     //alert(myPrincipal + " "+ myRate +" " +myYears);
                     
+                    onLoadBuildDivTblHeader();
+
                     for (var i = 1; i <= myYears; i++){
                         newAmount = myPrincipal * (1 + ((myRate/100)/12));
                         newInterest = newAmount - myPrincipal;
@@ -49,4 +52,6 @@
                     document.getElementById('txtPrincipal').value = "";
                     document.getElementById('txtRate').value = "";
                     document.getElementById('txtYear').value = "";
+                
+                    onLoadBuildDivTblHeader();
                 }
